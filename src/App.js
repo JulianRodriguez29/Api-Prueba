@@ -48,7 +48,6 @@ function App() {
   }
 
   const actualizarUsuario = async (id, usuarioActualizado) => {
-    console.log(usuarioActualizado);
     await axios.put(`https://localhost:7249/api/Usuarios/${id}`, usuarioActualizado);
     const nuevosUsuarios = usuarios.map((usuario) => {
       if (usuario.id === id) {
@@ -69,7 +68,6 @@ function App() {
     setMostrarFormularioEditar(value);
     setUsuarioEditando(null);
   };
-  console.log(usuarioEditando);
 
   return (
     <div className="App container">
